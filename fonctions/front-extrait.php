@@ -4,9 +4,8 @@ if( !defined( 'ABSPATH' ) )
 	die( 'Cheatin\' uh?' );
 
 // Modifie la longeur de l'extrait
-$opt_gen_extrait = get_option('opt_gen_extrait');
-
 function optimizator_extrait($length){
+    $opt_gen_extrait = get_option('opt_gen_extrait');
     return $opt_gen_extrait;
 }
 add_filter('excerpt_length', 'optimizator_extrait');

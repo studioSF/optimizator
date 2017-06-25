@@ -20,6 +20,7 @@ if( !defined( 'ABSPATH' ) )
 
             // On liste ici les variables utilisées pour pouvoir les afficher dans le plugin
             $opt_uti_cookies_pos = get_option('opt_uti_cookies_pos');
+            $opt_uti_cookies_pos2 = 'false';
             $opt_uti_cookies_txt = get_option('opt_uti_cookies_txt');
             $opt_uti_cookies_btn = get_option('opt_uti_cookies_btn');
             $opt_uti_cookies_lien = get_option('opt_uti_cookies_lien');
@@ -30,7 +31,7 @@ if( !defined( 'ABSPATH' ) )
             $opt_uti_cookies_bttxtcolor = get_option('opt_uti_cookies_bttxtcolor');
             
             if($opt_uti_cookies_pos == 'push'){
-                $opt_uti_cookies_pos2 = '"static": true';
+                $opt_uti_cookies_pos2 = 'true';
                 $opt_uti_cookies_pos = "top";
             }
 
@@ -49,7 +50,7 @@ if( !defined( 'ABSPATH' ) )
                             }
                         },
                         "position": "'. $opt_uti_cookies_pos .'",
-                        '. $opt_uti_cookies_pos2 .'
+                        "static": '. $opt_uti_cookies_pos2 .',
                         "content": {
                             "message": "'. $opt_uti_cookies_txt .'",
                             "dismiss": "'. $opt_uti_cookies_btn .'",

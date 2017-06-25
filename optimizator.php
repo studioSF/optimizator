@@ -50,7 +50,7 @@ class Optimizator_Plugin {
 			$groupVar = array (
 				'opt_gen_barreadmin', 'opt_gen_nocommentaires', 'opt_gen_dw_press', 'opt_gen_dw_oeil', 'opt_gen_dw_commentaires', 'opt_gen_dw_recent', 'opt_gen_dw_activite', 'opt_gen_dw_wordpress', 'opt_gen_dw_plugins', 'opt_gen_dw_liens',
 				'opt_gen_dw_welcome', 'opt_post_formats', 'opt_post_etiquettes', 'opt_uti_cookies', 'opt_uti_cookies_btn', 'opt_uti_cookies_lien', 'opt_uti_cookies_txt', 'opt_uti_cookies_url', 'opt_uti_cookies_bgcolor', 'opt_uti_cookies_btcolor',
-				'opt_uti_cookies_bgtxtcolor', 'opt_uti_cookies_bttxtcolor', 'opt_uti_cookies_pos', 'opt_tinymce_formats', 'opt_page_imageune', 'opt_article_imageune', 'opt_post_rss', 'opt_post_rss_kill', 'opt_gen_extrait', 'opt_gen_extrait_page',
+				'opt_uti_cookies_bgtxtcolor', 'opt_uti_cookies_bttxtcolor', 'opt_uti_cookies_pos', 'opt_uti_cookies_pos2', 'opt_tinymce_formats', 'opt_page_imageune', 'opt_article_imageune', 'opt_post_rss', 'opt_post_rss_kill', 'opt_gen_extrait', 'opt_gen_extrait_page',
 				'opt_post_image_obligatoire', 'opt_post_redirige', 'opt_acf_user', 'opt_acf_googlemap', 'opt_gen_ga', 'opt_gen_ga_cle', 'opt_tinymce_bouton', 'opt_post_rename', 'opt_post_rename_pluriel', 'opt_gen_apirest'
 			);
 			foreach ($groupVar as &$value){
@@ -120,6 +120,7 @@ class Optimizator_Plugin {
 			</ul>
 
 		</div>
+		
 		<div class="optimizator-contenu">
 			<div class="optimizator-container">
 				<?php
@@ -149,10 +150,14 @@ class Optimizator_Plugin {
 				<?php } ?>
 
 					<div class="optimizator-footer">
-						<?php submit_button(
+						<?php
+						$other_attributes = array( 'id' => 'optimizator-btn' );
+						submit_button(
 							'Sauvegarder les options',
 							'primary',
-							'submit'
+							'submit',
+							true,
+							$other_attributes
 						); ?>
 					</div>
 
