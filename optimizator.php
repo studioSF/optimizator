@@ -5,7 +5,7 @@ Plugin URI: http://www.search-factory.fr
 Description: Optimisations et configuration d'options : TinyMCE, articles, pages, interface, sécurité, etc.
 Author: SEARCH-Factory
 Author URI: http://www.search-factory.fr
-Version: 1.0
+Version: 1.1
 */
 
 class Optimizator_Plugin {

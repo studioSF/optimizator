@@ -16,4 +16,7 @@ Ce plugin se découpe en plusieurs onglets :
 * TinyMCE
 * Articles
 * Pages
+* Cookies Choice
+* Utilisateur
+* ACF Pro
 * wp-config
